@@ -1,0 +1,222 @@
+<Window
+	x:Class="FluxTeam.AttachNotification" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:FluxTeam"
+	Title="AttachNotification"
+	Height="450"
+	Width="800"
+	AllowsTransparency="True"
+	WindowStyle="None"
+	WindowStartupLocation="CenterScreen"
+	WindowState="Maximized"
+	Topmost="True"
+	Background="{x:Null}">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<Storyboard
+				x:Key="AttachAnimation"
+				Completed="AtttachAnimation_Completed">
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					Storyboard.TargetName="label">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:2"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:3"
+						Value="1" />
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					Storyboard.TargetName="label1">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:2"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:3.5"
+						Value="1" />
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(FrameworkElement.Width)"
+					Storyboard.TargetName="border">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="50">
+						<EasingDoubleKeyFrame.EasingFunction>
+							<QuinticEase
+								EasingMode="EaseOut" />
+						</EasingDoubleKeyFrame.EasingFunction>
+					</EasingDoubleKeyFrame>
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:1.5"
+						Value="50" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:2"
+						Value="450">
+						<EasingDoubleKeyFrame.EasingFunction>
+							<CircleEase
+								EasingMode="EaseOut" />
+						</EasingDoubleKeyFrame.EasingFunction>
+					</EasingDoubleKeyFrame>
+				</DoubleAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(Border.CornerRadius)"
+					Storyboard.TargetName="border1">
+					<DiscreteObjectKeyFrame
+						KeyTime="0">
+						<ObjectKeyFrame.Value>
+							<CornerRadius>5</CornerRadius>
+						</ObjectKeyFrame.Value>
+					</DiscreteObjectKeyFrame>
+					<DiscreteObjectKeyFrame
+						KeyTime="0:0:1.5">
+						<ObjectKeyFrame.Value>
+							<CornerRadius>5</CornerRadius>
+						</ObjectKeyFrame.Value>
+					</DiscreteObjectKeyFrame>
+					<DiscreteObjectKeyFrame
+						KeyTime="0:0:2">
+						<ObjectKeyFrame.Value>
+							<CornerRadius>5,0,0,5</CornerRadius>
+						</ObjectKeyFrame.Value>
+					</DiscreteObjectKeyFrame>
+				</ObjectAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					Storyboard.TargetName="border1">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:1.5"
+						Value="1" />
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)"
+					Storyboard.TargetName="border">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="0" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="1">
+						<EasingDoubleKeyFrame.EasingFunction>
+							<QuinticEase
+								EasingMode="EaseOut" />
+						</EasingDoubleKeyFrame.EasingFunction>
+					</EasingDoubleKeyFrame>
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)"
+					Storyboard.TargetName="border">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="-25" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="0">
+						<EasingDoubleKeyFrame.EasingFunction>
+							<QuinticEase
+								EasingMode="EaseOut" />
+						</EasingDoubleKeyFrame.EasingFunction>
+					</EasingDoubleKeyFrame>
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(FrameworkElement.Height)"
+					Storyboard.TargetName="border">
+					<EasingDoubleKeyFrame
+						KeyTime="0"
+						Value="50" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:0.5"
+						Value="50">
+						<EasingDoubleKeyFrame.EasingFunction>
+							<QuinticEase
+								EasingMode="EaseOut" />
+						</EasingDoubleKeyFrame.EasingFunction>
+					</EasingDoubleKeyFrame>
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames
+					Storyboard.TargetProperty="(UIElement.Opacity)"
+					Storyboard.TargetName="border">
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:2"
+						Value="1" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:6.5"
+						Value="1" />
+					<EasingDoubleKeyFrame
+						KeyTime="0:0:7.5"
+						Value="0" />
+				</DoubleAnimationUsingKeyFrames>
+			</Storyboard>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<FrameworkElement.Triggers>
+		<EventTrigger
+			RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard
+				Storyboard="{StaticResource AttachAnimation}" />
+		</EventTrigger>
+	</FrameworkElement.Triggers>
+	<Grid>
+		<Border
+			Name="border"
+			Background="#FF141414"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Top"
+			Height="50"
+			Width="450"
+			Margin="0,50,0,0"
+			CornerRadius="10"
+			RenderTransformOrigin="0.5,0.5">
+			<UIElement.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform />
+					<SkewTransform />
+					<RotateTransform />
+					<TranslateTransform />
+				</TransformGroup>
+			</UIElement.RenderTransform>
+			<Grid>
+				<Border
+					Name="border1"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Center"
+					Width="50"
+					Height="50"
+					CornerRadius="5,0,0,5">
+					<Border.Background>
+						<ImageBrush
+							ImageSource="/ft logo.png" />
+					</Border.Background>
+				</Border>
+				<Label
+					Name="label"
+					Margin="50,4,0,21"
+					FontFamily="/FluxTeam;component/Assets/Fonts/#Poppins SemiBold"
+					Content="FluxTeam has been Injected Successfully."
+					Foreground="#FFFFFFFF"
+					Padding="5,5,5,0"
+					FontSize="14" />
+				<Label
+					Name="label1"
+					Margin="50,21,0,4"
+					FontFamily="/FluxTeam;component/Assets/Fonts/#Poppins"
+					Content="Enjoy using FluxTeam!"
+					Foreground="#FFFFFFFF"
+					Padding="5,5,5,0" />
+			</Grid>
+		</Border>
+	</Grid>
+</Window>
